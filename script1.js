@@ -107,8 +107,6 @@ function draw() {
     GAME.canvasContext.clearRect(0, 0, GAME.width, GAME.height);
     GAME.canvasContext.drawImage(GAME.background, 0, 0, GAME.width, GAME.width);  //Рисуем фон
 
-    //loadImages(["img/YelMag.png", "img/BluMag.png"], drawImages);
-
     GAME.canvasContext.drawImage(BULLET1.img, 50, GAME.height - 75, BULLET1.size, BULLET1.size); //Рисуем пулю1
 
     GAME.canvasContext.drawImage(BULLET2.img, GAME.width - 100, GAME.height - 75, BULLET2.size, BULLET2.size); //Рисуем пулю2
@@ -167,7 +165,6 @@ function _initCanvas(canvas) {
 }
 
 function update() {
-
     //Двигаем игрока на его скорость
     PLAYER1.y += PLAYER1.yDirection;
     PLAYER1.x += PLAYER1.xDirection;
@@ -248,12 +245,10 @@ function update() {
 }
 
 function _initEventsListeners(canvas) {
-    document.addEventListener("keydown", _onDocumentKeyDown);
-    
+    document.addEventListener("keydown", _onDocumentKeyDown)   
 }
 
 function _onDocumentKeyDown(event) {
-
     if (event.keyCode == 87) {
         if (PLAYER1.y == 0) {
             PLAYER1.yDirection = 0     
@@ -374,36 +369,3 @@ function _inclicks1() {
 function _inclicks2() {
     score2++
 }
-
-//function loadImages(pathes, cb) {
-    //var images = [];
-    //var imagesToLoad = pathes.length;
-    //function onImageLoadded() {
-     //if(!--imagesToLoad) {
-       //cb(images);
-     //}
-    //}
-    //for(var i=0; i<pathes.length; ++i) {
-     //var img = new Image();
-     //images.push(img);
-     //img.src = pathes[i];
-     //img.onload = onImageLoadded;
-    //}
-   //}
-
-   //function drawImages(array) {
-    //for (var i = 0; i < array.length; i++) { 
-     //GAME.canvasContext.drawImage(array[i], i*50, i*50);
-    //}
-   //}
-
-   function shuffle(array) {
-    var tmp, current, top = array.length;
-    if(top) while(--top) {
-      current = Math.floor(Math.random() * (top + 1));
-      tmp = array[current];
-      array[current] = array[top];
-      array[top] = tmp;
-    }
-    return array;
-  }

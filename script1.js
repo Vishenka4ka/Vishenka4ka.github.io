@@ -80,8 +80,8 @@ function init() {
     PLAYER1.down.src = "img/down.png";
     PLAYER1.left.src = "img/left.png";
     PLAYER1.right.src = "img/right.png";
-    PLAYER2.skin.src = "img/BluMag.png";
-    PLAYER2.mirSkin.src = "img/BluMagMir.png";
+    PLAYER2.skin.src = "img/bluMag.png";
+    PLAYER2.mirSkin.src = "img/bluMagMir.png";
     PLAYER2.up.src = "img/up.png";
     PLAYER2.down.src = "img/down.png";
     PLAYER2.left.src = "img/left.png";
